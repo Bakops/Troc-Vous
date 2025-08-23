@@ -3,14 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Troc&Vous</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Troc&Vous Header</title>
   </head>
   <body>
     <div class="container_header">
@@ -23,94 +16,93 @@
 
       <header class="header2">
         <nav class="nav-container">
-          <div class="menu-icon" id="menu-icon" (click)="toggleMenu()">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              [class.active]="isMenuOpen"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"
-                fill="#0F1729"
-              /></svg
-            ><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              [class.active]="isMenuOpen"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"
-                fill="#0F1729"
-              />
-            </svg>
+          <div class="logo">
+            <a href="/" class="logo-container" routerLink="/">
+              <img src="Logo-troc-&-vous.png" alt="" />
+            </a>
           </div>
 
-          <a href="/" class="logo-container">
-            <img class="logo" src="Logo-troc-&-vous.png" alt="" />
-          </a>
-
-          <div class="nav-links" id="nav-links">
-            <a href="/" class="active">Accueil</a>
-            <a href="/annonces">Annonces</a>
-            <a href="/commentcamarche">Comment ça marche</a>
-            <a href="/contact">Contact</a>
+          <div class="nav-links" [class.active]="isMenuOpen">
+            <a
+              href="/"
+              routerLink="/"
+              class="nav-link active"
+              (click)="closeMenu()"
+              >Accueil</a
+            >
+            <a
+              href="/annonces"
+              routerLink="/annonces"
+              class="nav-link"
+              (click)="closeMenu()"
+              >Annonces</a
+            >
+            <a
+              href="/comment-ca-marche"
+              routerLink="/comment-ca-marche"
+              class="nav-link"
+              (click)="closeMenu()"
+              >Comment ça marche</a
+            >
+            <a
+              href="/contact"
+              routerLink="/contact"
+              class="nav-link"
+              (click)="closeMenu()"
+              >Contact</a
+            >
           </div>
 
-          <div class="auth-button">
-            <a href="/connexion">Connexion</a>
-            <a href="/connexion">Incriptions</a>
+          <div class="right-section">
+            <div class="language-selector">
+              <span class="language-text">Eng</span>
+              <svg
+                class="language-arrow"
+                width="12"
+                height="8"
+                viewBox="0 0 12 8"
+              >
+                <path
+                  d="M1 1l5 5 5-5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+
+            <div class="auth-buttons">
+              <a href="/connexion" routerLink="/connexion" class="connexion-btn"
+                >Connexion</a
+              >
+              <a
+                href="/inscription"
+                routerLink="/inscription"
+                class="inscription-btn"
+                >Inscription</a
+              >
+            </div>
+          </div>
+
+          <!-- Menu burger (visible sur mobile/tablette) -->
+          <div
+            class="menu-icon"
+            [class.active]="isMenuOpen"
+            (click)="toggleMenu()"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </nav>
       </header>
+
+      <!-- Overlay pour le menu mobile -->
+      <div
+        class="menu-overlay"
+        [class.active]="isMenuOpen"
+        (click)="closeMenu()"
+      ></div>
     </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuIcon = document.getElementById("menu-icon");
-        const navLinks = document.getElementById("nav-links");
-        let isMenuOpen = false;
-
-        function toggleMenu() {
-          isMenuOpen = !isMenuOpen;
-          navLinks.classList.toggle("active");
-          menuIcon.classList.toggle("active");
-          document.body.style.overflow = isMenuOpen ? "hidden" : "";
-        }
-
-        function closeMenu() {
-          isMenuOpen = false;
-          navLinks.classList.remove("active");
-          menuIcon.classList.remove("active");
-          document.body.style.overflow = "";
-        }
-
-        menuIcon.addEventListener("click", function (e) {
-          e.stopPropagation();
-          toggleMenu();
-        });
-
-        document.addEventListener("click", function (e) {
-          if (
-            isMenuOpen &&
-            !navLinks.contains(e.target) &&
-            e.target !== menuIcon
-          ) {
-            closeMenu();
-          }
-        });
-
-        // Fermer le menu en cliquant sur un lien
-        const links = navLinks.querySelectorAll("a");
-        links.forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-      });
-    </script>
   </body>
 </html>

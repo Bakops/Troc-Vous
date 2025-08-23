@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,24 +9,58 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnDestroy {
   isMenuOpen = false;
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    document.body.classList.toggle('menu-open', this.isMenuOpen);
+    this.updateBodyClass();
   }
 
   closeMenu(): void {
     this.isMenuOpen = false;
-    document.body.classList.remove('menu-open');
+    this.updateBodyClass();
+  }
+
+  private updateBodyClass(): void {
+    if (this.isMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
   }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event): void {
     const target = event.target as HTMLElement;
-    if (!target.closest('.menu-icon') && !target.closest('.nav-links')) {
+
+    if (
+      this.isMenuOpen &&
+      !target.closest('.menu-icon') &&
+      !target.closest('.nav-links') &&
+      !target.closest('.right-section')
+    ) {
       this.closeMenu();
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    const target = event.target as Window;
+
+    if (target.innerWidth > 768 && this.isMenuOpen) {
+      this.closeMenu();
+    }
+  }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapePress(): void {
+    if (this.isMenuOpen) {
+      this.closeMenu();
+    }
+  }
+
+  ngOnDestroy(): void {
+    document.body.classList.remove('menu-open');
   }
 }
