@@ -1,0 +1,8 @@
+html::-webkit-scrollbar {
+  width: 11px;
+  display: none;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
