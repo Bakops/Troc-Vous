@@ -1,4 +1,3 @@
-/* Reset et base */
 * {
   margin: 0;
   padding: 0;
@@ -232,7 +231,6 @@ body {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Overlay pour le menu mobile */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -251,7 +249,6 @@ body {
   visibility: visible;
 }
 
-/* Tablette */
 @media (max-width: 1024px) {
   .nav-container {
     padding: 0 3%;
@@ -274,33 +271,30 @@ body {
   }
 }
 
-/* Mobile et tablette - Menu burger */
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 20px;
   }
 
-  /* Logo plus petit */
   .logo a img {
     width: 65%;
   }
 
-  /* Afficher icône burger */
   .menu-icon {
     display: flex;
     z-index: 1003;
   }
 
-  /* Menu plein écran qui glisse */
   .nav-links {
     position: fixed;
-    top: 70px; /* header reste visible */
+    top: 70px;
     right: -100%;
     width: 100%;
     height: calc(100vh - 70px);
     background-color: white;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
     justify-content: flex-start;
     padding: 3rem 2rem;
     transition: right 0.4s ease-in-out;
@@ -329,12 +323,10 @@ body {
     display: none;
   }
 
-  /* Supprimer les boutons du header */
   .right-section {
     display: none;
   }
 
-  /* Réafficher dans le menu mobile */
   .auth-buttons {
     display: flex;
     flex-direction: column;
@@ -354,7 +346,6 @@ body {
     display: none;
   }
 
-  /* Overlay foncé derrière le menu */
   .menu-overlay {
     display: block;
     position: fixed;
@@ -386,5 +377,8 @@ body {
   .connexion-btn,
   .inscription-btn {
     width: 90%;
+  }
+  #sur_header {
+    display: none;
   }
 }
