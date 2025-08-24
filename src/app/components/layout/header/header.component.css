@@ -109,28 +109,6 @@ body {
   z-index: 1002;
 }
 
-.language-selector {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-  color: #2c3e50;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.language-text {
-  font-family: "Poppins", sans-serif;
-}
-
-.language-arrow {
-  transition: transform 0.3s ease;
-}
-
-.language-selector:hover .language-arrow {
-  transform: rotate(180deg);
-}
-
 .auth-buttons {
   display: flex;
   align-items: center;
@@ -237,7 +215,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -264,10 +241,6 @@ body {
 
   .right-section {
     gap: 15px;
-  }
-
-  .language-selector {
-    font-size: 13px;
   }
 }
 
@@ -342,10 +315,6 @@ body {
     text-align: center;
   }
 
-  .language-selector {
-    display: none;
-  }
-
   .menu-overlay {
     display: block;
     position: fixed;
@@ -378,6 +347,7 @@ body {
   .inscription-btn {
     width: 90%;
   }
+
   #sur_header {
     display: none;
   }

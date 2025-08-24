@@ -16,14 +16,12 @@
 
       <header class="header2">
         <nav class="nav-container">
-          <!-- LOGO -->
           <div class="logo">
             <a href="/" class="logo-container" routerLink="/">
               <img src="Logo-troc-&-vous.png" alt="Logo Troc&Vous" />
             </a>
           </div>
 
-          <!-- MENU MOBILE & DESKTOP -->
           <div class="nav-links" [class.active]="isMenuOpen">
             <a
               href="/"
@@ -53,51 +51,25 @@
               (click)="closeMenu()"
               >Contact</a
             >
-
-            <!-- Boutons déplacés dans le menu -->
-            <div class="auth-buttons">
-              <div class="connexion">
-                <a
-                  href="/connexion"
-                  routerLink="/connexion"
-                  class="connexion-btn"
-                  >Connexion</a
-                >
-              </div>
-              <div class="inscription">
-                <a
-                  href="/inscription"
-                  routerLink="/inscription"
-                  class="inscription-btn"
-                  >Inscription</a
-                >
-                <div class="arrow-inscriptions">
-                  <img src="arrow.svg" alt="" />
-                </div>
-              </div>
-            </div>
           </div>
-
-          <!-- LANGUE (visible seulement en desktop) -->
-          <div class="right-section">
-            <div class="language-selector">
-              <span class="language-text">Eng</span>
-              <svg
-                class="language-arrow"
-                width="12"
-                height="8"
-                viewBox="0 0 12 8"
+          <div class="auth-buttons">
+            <div class="connexion">
+              <a href="/connexion" routerLink="/connexion" class="connexion-btn"
+                >Connexion</a
               >
-                <path
-                  d="M1 1l5 5 5-5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  fill="none"
-                />
-              </svg>
+            </div>
+            <div class="inscription">
+              <a
+                href="/inscription"
+                routerLink="/inscription"
+                class="inscription-btn"
+                >Inscription</a
+              >
+              <div class="arrow-inscriptions">
+                <img src="arrow.svg" alt="" />
+              </div>
             </div>
           </div>
-
           <!-- MENU BURGER -->
           <div
             class="menu-icon"
