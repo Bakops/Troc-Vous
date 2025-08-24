@@ -16,12 +16,14 @@
 
       <header class="header2">
         <nav class="nav-container">
+          <!-- LOGO -->
           <div class="logo">
             <a href="/" class="logo-container" routerLink="/">
-              <img src="Logo-troc-&-vous.png" alt="" />
+              <img src="Logo-troc-&-vous.png" alt="Logo Troc&Vous" />
             </a>
           </div>
 
+          <!-- MENU MOBILE & DESKTOP -->
           <div class="nav-links" [class.active]="isMenuOpen">
             <a
               href="/"
@@ -51,8 +53,32 @@
               (click)="closeMenu()"
               >Contact</a
             >
+
+            <!-- Boutons déplacés dans le menu -->
+            <div class="auth-buttons">
+              <div class="connexion">
+                <a
+                  href="/connexion"
+                  routerLink="/connexion"
+                  class="connexion-btn"
+                  >Connexion</a
+                >
+              </div>
+              <div class="inscription">
+                <a
+                  href="/inscription"
+                  routerLink="/inscription"
+                  class="inscription-btn"
+                  >Inscription</a
+                >
+                <div class="arrow-inscriptions">
+                  <img src="arrow.svg" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- LANGUE (visible seulement en desktop) -->
           <div class="right-section">
             <div class="language-selector">
               <span class="language-text">Eng</span>
@@ -70,34 +96,31 @@
                 />
               </svg>
             </div>
-
-            <div class="auth-buttons">
-              <a href="/connexion" routerLink="/connexion" class="connexion-btn"
-                >Connexion</a
-              >
-              <a
-                href="/inscription"
-                routerLink="/inscription"
-                class="inscription-btn"
-                >Inscription</a
-              >
-            </div>
           </div>
 
-          <!-- Menu burger (visible sur mobile/tablette) -->
+          <!-- MENU BURGER -->
           <div
             class="menu-icon"
             [class.active]="isMenuOpen"
             (click)="toggleMenu()"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              [class.active]="isMenuOpen"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"
+                fill="#0F1729"
+              />
+            </svg>
           </div>
         </nav>
       </header>
 
-      <!-- Overlay pour le menu mobile -->
       <div
         class="menu-overlay"
         [class.active]="isMenuOpen"

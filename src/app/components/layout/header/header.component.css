@@ -173,12 +173,33 @@ body {
   line-height: normal;
 }
 
-.inscription-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 154, 86, 0.4);
+.inscription:hover .arrow-inscriptions img {
+  transform: rotate(90deg);
 }
 
-/* Menu burger */
+.arrow-inscriptions img {
+  transition: transform 0.3s ease;
+}
+
+.inscription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.arrow-inscriptions {
+  width: 33px;
+  height: 33px;
+  margin-left: -22px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  background: #6dbe45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-icon {
   display: none;
   flex-direction: column;
@@ -218,7 +239,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -229,8 +250,6 @@ body {
   opacity: 1;
   visibility: visible;
 }
-
-/* Styles responsifs */
 
 /* Tablette */
 @media (max-width: 1024px) {
@@ -247,7 +266,11 @@ body {
   }
 
   .right-section {
-    gap: 20px;
+    gap: 15px;
+  }
+
+  .language-selector {
+    font-size: 13px;
   }
 }
 
@@ -257,38 +280,44 @@ body {
     padding: 0 20px;
   }
 
-  /* Afficher le menu burger */
-  .menu-icon {
-    display: flex;
+  /* Logo plus petit */
+  .logo a img {
+    width: 65%;
   }
 
-  /* Masquer la navigation principale sur mobile */
+  /* Afficher icône burger */
+  .menu-icon {
+    display: flex;
+    z-index: 1003;
+  }
+
+  /* Menu plein écran qui glisse */
   .nav-links {
     position: fixed;
-    top: 102px; /* hauteur du header + bannière */
+    top: 70px; /* header reste visible */
     right: -100%;
-    width: 300px;
-    height: calc(100vh - 102px);
+    width: 100%;
+    height: calc(100vh - 70px);
     background-color: white;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    padding: 2rem 1.5rem;
-    transition: right 0.3s ease;
-    border-left: 1px solid #eee;
-    gap: 1.5rem;
-    z-index: 999;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem;
+    transition: right 0.4s ease-in-out;
+    gap: 2rem;
+    z-index: 1002;
   }
 
   .nav-links.active {
     right: 0;
+    margin-top: 30px;
   }
 
   .nav-link {
-    font-size: 16px;
-    padding: 12px 0;
+    font-size: 18px;
+    padding: 14px 0;
     width: 100%;
+    text-align: center;
     border-bottom: 1px solid #f0f0f0;
   }
 
@@ -300,60 +329,62 @@ body {
     display: none;
   }
 
-  /* Masquer les éléments de droite sur très petit écran */
+  /* Supprimer les boutons du header */
+  .right-section {
+    display: none;
+  }
+
+  /* Réafficher dans le menu mobile */
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .connexion-btn,
+  .inscription-btn {
+    width: 80%;
+    text-align: center;
+  }
+
   .language-selector {
     display: none;
   }
 
-  .auth-buttons {
-    gap: 10px;
+  /* Overlay foncé derrière le menu */
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1001;
   }
 
-  .logo-text {
-    font-size: 1.6rem;
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-/* Très petits écrans */
 @media (max-width: 480px) {
-  #sur_header p {
-    font-size: 11px;
-    padding: 0 15px;
+  .logo a img {
+    width: 55%;
   }
 
-  .nav-container {
-    padding: 0 15px;
+  .nav-link {
+    font-size: 16px;
   }
 
-  .nav-links {
-    width: 280px;
-  }
-
-  .connexion-btn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
+  .connexion-btn,
   .inscription-btn {
-    padding: 8px 16px;
-    font-size: 12px;
+    width: 90%;
   }
-
-  .logo-text {
-    font-size: 1.4rem;
-  }
-
-  .logo-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .logo-icon::after {
-    width: 14px;
-    height: 14px;
-  }
-}
-
-.menu-open {
-  overflow: hidden;
 }
