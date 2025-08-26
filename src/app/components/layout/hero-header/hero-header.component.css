@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-header {
+  min-height: 70vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-content {
+  color: #000;
+  max-width: 1380px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+}
+
+.title {
+  font-family: "Samsung Sharp Sans";
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.text_bleu {
+  color: #1aaebd;
+}
+
+.surtitle {
+  color: #727272;
+  text-align: center;
+  font-family: "Samsung Sharp Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
+  max-width: 800px;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  border-radius: 25.133px;
+  background: #f5a623;
+  box-shadow: 0 9.667px 38.667px 0 rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.bounce {
+  display: inline-block;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  .hero-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .surtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .hero-content {
+    padding: 1rem;
+    gap: 20px;
+  }
+  .cta-button {
+    padding: 0.9rem 2rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-header {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+  .hero-content {
+    padding: 0.5rem;
+    gap: 20px;
+  }
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  .title br {
+    display: none;
+  }
+  .surtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+  .cta-button {
+    padding: 0.8rem 1.8rem;
+    width: auto;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 575px) {
+  .title {
+    font-size: 2rem;
+  }
+  .surtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  .cta-button a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .surtitle {
+    font-size: 0.85rem;
+  }
+  .hero-content {
+    gap: 15px;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
