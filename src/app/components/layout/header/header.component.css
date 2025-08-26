@@ -27,7 +27,7 @@ body {
 
 #sur_header p {
   color: #fff;
-  font-family: "Samsung Sharp Sans";
+  font-family: poppins, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -74,7 +74,7 @@ body {
 
 .nav-link {
   color: #000;
-  font-family: "Samsung Sharp Sans";
+  font-family: poppins, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -122,10 +122,10 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   color: #000;
-  font-family: "Samsung Sharp Sans";
+  font-family: poppins, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: normal;
 }
@@ -143,7 +143,7 @@ body {
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(255, 154, 86, 0.3);
   color: #fff;
-  font-family: "Samsung Sharp Sans";
+  font-family: poppins, sans-serif;
   font-size: 14px;
   letter-spacing: 0.5px;
   font-style: normal;
