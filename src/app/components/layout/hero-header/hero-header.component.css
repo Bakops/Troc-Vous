@@ -1,8 +1,7 @@
 @font-face {
   font-family: "Samsung Sharp Sans";
-  src: url("https://cdn.jsdelivr.net/gh/googlefonts/samsungone/samsungsharp-sans/SamsungSharpSans-Bold.ttf")
-    format("truetype");
-  font-weight: bold;
+  src: url("/fonts/samsung-font/samsungsharpsans.otf") format("otf");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -14,7 +13,6 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
