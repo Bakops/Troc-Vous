@@ -188,6 +188,14 @@ body {
   z-index: 1003;
 }
 
+.menu-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.menu-icon svg.active {
+  transform: rotate(90deg);
+}
+
 .menu-icon span {
   width: 25px;
   height: 3px;
@@ -301,7 +309,7 @@ body {
   }
 
   .auth-buttons {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 16px;
     width: 100%;
@@ -331,6 +339,11 @@ body {
   .menu-overlay.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  .sur_header p {
+    font-size: 12px;
+    padding: 0 10px;
   }
 }
 

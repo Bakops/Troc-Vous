@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-          <!-- MENU BURGER -->
+
           <div
             class="menu-icon"
             [class.active]="isMenuOpen"
@@ -99,5 +99,32 @@
         (click)="closeMenu()"
       ></div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navLinks = document.getElementById("nav-links");
+
+        menuIcon.addEventListener("click", function (e) {
+          e.stopPropagation();
+          navLinks.classList.toggle("active");
+          document.body.classList.toggle("menu-open");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (
+            navLinks.classList.contains("active") &&
+            !navLinks.contains(e.target) &&
+            e.target !== menuIcon
+          ) {
+            navLinks.classList.remove("active");
+            document.body.classList.remove("menu-open");
+          }
+        });
+
+        navLinks.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
   </body>
 </html>
