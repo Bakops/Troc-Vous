@@ -295,6 +295,7 @@ body {
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 20px;
+    margin: 0;
   }
 
   .logo a img {
@@ -400,8 +401,31 @@ body {
   .inscription-btn {
     width: 90%;
   }
+}
 
+@keyframes surheader-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 767px) {
   #sur_header {
-    display: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+  }
+  .surheader-marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: surheader-marquee 12s linear infinite;
+    will-change: transform;
+  }
+  #sur_header p {
+    display: inline-block;
+    padding-right: 2rem;
   }
 }
