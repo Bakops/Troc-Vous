@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("/fonts/samsung-font/SamsungSharpSans.woff2") format("woff2"),
+    url("/fonts/samsung-font/SamsungSharpSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("/fonts/samsung-font/SamsungSharpSans-Medium.woff2") format("woff2"),
+    url("/fonts/samsung-font/SamsungSharpSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Samsung Sharp Sans";
+  src: url("/fonts/samsung-font/SamsungSharpSans-Bold.woff2") format("woff2"),
+    url("/fonts/samsung-font/SamsungSharpSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -74,10 +101,11 @@ body {
 
 .nav-link {
   color: #000;
-  font-family: poppins, sans-serif;
+  font-family: "Samsung Sharp Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+  transition: all 0.3s ease;
   line-height: normal;
   text-decoration: none;
 }
@@ -118,11 +146,11 @@ body {
 .connexion-btn {
   background-color: transparent;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 30px;
   transition: all 0.3s ease;
   text-decoration: none;
   color: #000;
-  font-family: poppins, sans-serif;
+  font-family: "Samsung Sharp Sans";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -143,7 +171,7 @@ body {
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(255, 154, 86, 0.3);
   color: #fff;
-  font-family: poppins, sans-serif;
+  font-family: "Samsung Sharp Sans";
   font-size: 14px;
   letter-spacing: 0.5px;
   font-style: normal;
