@@ -62,5 +62,19 @@ export class HeaderComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     document.body.classList.remove('menu-open');
+    window.removeEventListener('scroll', this.onScroll, true);
   }
+
+  ngOnInit() {
+    window.addEventListener('scroll', this.onScroll, true);
+  }
+
+  onScroll = () => {
+    const header = document.querySelector('.header2');
+    if (window.scrollY > 0) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  };
 }
