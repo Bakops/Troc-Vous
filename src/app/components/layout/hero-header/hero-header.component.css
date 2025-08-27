@@ -218,3 +218,49 @@ body {
     max-width: 250px;
   }
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 332.887px;
+  height: auto;
+  z-index: 2;
+}
+
+.arrow_left {
+  left: 0px;
+}
+
+.arrow_right {
+  right: 0px;
+}
+
+@media (max-width: 991px) {
+  .arrow {
+    width: 154px;
+    top: 31%;
+  }
+  .arrow_left {
+    left: 16px;
+  }
+  .arrow_right {
+    right: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .arrow {
+    width: 90px;
+  }
+  .arrow_left {
+    left: 4px;
+  }
+  .arrow_right {
+    right: 4px;
+  }
+  .hero-header {
+    min-height: 50vh;
+    padding: 0.5rem;
+  }
+}
