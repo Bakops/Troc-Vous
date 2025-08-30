@@ -25,38 +25,25 @@
       <header class="header2">
         <nav class="nav-container">
           <div class="logo">
-            <a href="/" class="logo-container" routerLink="/">
+            <a class="logo-container" routerLink="/">
               <img src="Logo-troc-&-vous.png" alt="Logo Troc&Vous" />
             </a>
           </div>
 
           <div class="nav-links" [class.active]="isMenuOpen">
-            <a
-              href="/"
-              routerLink="/"
-              class="nav-link active"
-              (click)="closeMenu()"
+            <a routerLink="/" class="nav-link active" (click)="closeMenu()"
               >Accueil</a
             >
-            <a
-              href="/annonces"
-              routerLink="/annonces"
-              class="nav-link"
-              (click)="closeMenu()"
+            <a routerLink="/annonces" class="nav-link" (click)="closeMenu()"
               >Annonces</a
             >
             <a
-              href="/comment-ca-marche"
-              routerLink="/comment-ca-marche"
+              routerLink="/comment-ça-marche"
               class="nav-link"
               (click)="closeMenu()"
               >Comment ça marche</a
             >
-            <a
-              href="/contact"
-              routerLink="/contact"
-              class="nav-link"
-              (click)="closeMenu()"
+            <a routerLink="/contact" class="nav-link" (click)="closeMenu()"
               >Contact</a
             >
           </div>

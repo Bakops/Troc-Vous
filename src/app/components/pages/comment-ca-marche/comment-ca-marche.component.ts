@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../layout/footer/footer.component';
 import { HeaderComponent } from '../../layout/header/header.component';
+
 @Component({
-  selector: 'app-annonces',
+  selector: 'app-comment-ca-marche',
   standalone: true,
   imports: [HeaderComponent, FooterComponent],
-  templateUrl: './annonces.component.html',
-  styleUrl: './annonces.component.css',
+  templateUrl: './comment-ca-marche.component.html',
+  styleUrl: './comment-ca-marche.component.css',
 })
-export class AnnoncesComponent {}
+export class CommentCaMarcheComponent {}
