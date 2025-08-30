@@ -274,22 +274,12 @@ body {
   visibility: visible;
 }
 
-@media (max-width: 1024px) {
-  .nav-container {
-    padding: 0 3%;
-  }
-
-  .nav-links {
-    gap: 2rem;
-  }
-
-  .nav-link {
-    font-size: 14px;
-  }
-
-  .right-section {
-    gap: 15px;
-  }
+.auth-buttons.desktop-auth {
+  display: flex;
+  gap: 15px;
+}
+.auth-buttons.mobile-auth {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -349,15 +339,17 @@ body {
     display: none;
   }
 
-  .auth-buttons {
+  .auth-buttons.desktop-auth {
     display: none;
+  }
+  .auth-buttons.mobile-auth {
+    display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
     align-items: center;
     margin-top: 2rem;
   }
-
   .connexion-btn,
   .inscription-btn {
     width: 80%;

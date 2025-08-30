@@ -30,7 +30,7 @@
             </a>
           </div>
 
-          <div class="nav-links" [class.active]="isMenuOpen">
+          <div class="nav-links" [class.active]="isMenuOpen" id="nav-links">
             <a routerLink="/" class="nav-link active" (click)="closeMenu()"
               >Accueil</a
             >
@@ -46,24 +46,30 @@
             <a routerLink="/contact" class="nav-link" (click)="closeMenu()"
               >Contact</a
             >
-          </div>
-          <div class="auth-buttons">
-            <div class="connexion">
+
+            <div class="auth-buttons mobile-auth">
               <a href="/connexion" routerLink="/connexion" class="connexion-btn"
                 >Connexion</a
               >
-            </div>
-            <div class="inscription">
               <a
                 href="/inscription"
                 routerLink="/inscription"
                 class="inscription-btn"
                 >Inscription</a
               >
-              <div class="arrow-inscriptions">
-                <img src="arrow.svg" alt="" />
-              </div>
             </div>
+          </div>
+
+          <div class="auth-buttons desktop-auth">
+            <a href="/connexion" routerLink="/connexion" class="connexion-btn"
+              >Connexion</a
+            >
+            <a
+              href="/inscription"
+              routerLink="/inscription"
+              class="inscription-btn"
+              >Inscription</a
+            >
           </div>
 
           <div

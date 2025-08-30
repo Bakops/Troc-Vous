@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AProposComponent } from './components/pages/a-propos/a-propos.component';
 import { AccueilComponent } from './components/pages/accueil/accueil.component';
 import { AnnoncesComponent } from './components/pages/annonces/annonces.component';
+import { CategoriesComponent } from './components/pages/categories/categories.component';
 import { CommentCaMarcheComponent } from './components/pages/comment-ca-marche/comment-ca-marche.component';
 import { ConnexionComponent } from './components/pages/connexion/connexion.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
@@ -25,4 +26,5 @@ export const routes: Routes = [
   { path: 'a-propos', component: AProposComponent },
   { path: 'mes-echanges', component: MesEchangesComponent },
   { path: 'profil', component: ProfilComponent },
+  { path: 'catégories', component: CategoriesComponent },
 ];
