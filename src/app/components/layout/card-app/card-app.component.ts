@@ -14,4 +14,14 @@ export class CardAppComponent {
   closeCard() {
     this.isVisible = false;
   }
+
+  acceptCookies() {
+    console.log('Cookies acceptés !');
+    this.closeCard();
+  }
+
+  refuseCookies() {
+    console.log('Cookies refusés !');
+    this.closeCard();
+  }
 }

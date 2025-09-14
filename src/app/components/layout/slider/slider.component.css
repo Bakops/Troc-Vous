@@ -2,7 +2,12 @@
   width: 100%;
   overflow: hidden;
   height: 2rem;
-  background-color: #1bafbd;
+  background: linear-gradient(
+    90deg,
+    rgba(78, 205, 196, 1) 35%,
+    rgba(245, 166, 35, 1) 100%
+  );
+
   display: flex;
   align-items: center;
 }
