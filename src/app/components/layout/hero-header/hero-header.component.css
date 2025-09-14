@@ -84,8 +84,9 @@ body {
   border-radius: 15px;
   background: #f5a623;
   box-shadow: 0 9.667px 38.667px 0 rgba(0, 0, 0, 0.1);
-  font-family: "Samsung Sharp Sans";
-  font-size: 0.75rem;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
   font-weight: 600;
   color: #fff;
   text-decoration: none;

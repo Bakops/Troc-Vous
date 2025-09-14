@@ -51,7 +51,9 @@
 h3 {
   margin: 0 0 8px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Poppins, sans-serif;
   color: #333;
 }
 
@@ -76,6 +78,7 @@ p {
   border: none;
   cursor: pointer;
   font-size: 14px;
+  font-family: Poppins, sans-serif;
   font-weight: bold;
   transition: all 0.3s ease;
 }
