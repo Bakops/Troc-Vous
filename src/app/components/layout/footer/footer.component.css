@@ -98,7 +98,7 @@ footer {
   letter-spacing: 0.5px;
   color: #1aaebd;
   font-family: "Samsung Sharp Sans", Arial, sans-serif;
-  text-transform: none; /* Retire l'uppercase */
+  text-transform: none;
 }
 
 .footer-links-list li {
@@ -110,7 +110,7 @@ footer {
   font-size: 15px;
   font-family: "Samsung Sharp Sans", Arial, sans-serif;
   font-weight: 500;
-  text-transform: none; /* Retire l'uppercase */
+  text-transform: none;
 }
 
 .footer-links-list a:hover {
@@ -160,7 +160,11 @@ footer {
 }
 
 .footer-copyright {
-  background: #1aaebd;
+  background: linear-gradient(
+    90deg,
+    rgba(78, 205, 196, 1) 35%,
+    rgba(245, 166, 35, 1) 100%
+  );
   text-align: center;
 }
 
@@ -168,7 +172,8 @@ footer {
   color: #fff;
   font-size: 13px;
   padding: 0.7rem 0;
-  font-family: "Samsung Sharp Sans", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
